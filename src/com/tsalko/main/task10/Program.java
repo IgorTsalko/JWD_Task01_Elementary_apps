@@ -1,12 +1,11 @@
 package com.tsalko.main.task10;
 
-public class Solution {
+public class Program {
 
     private UserDataOutput output = new UserDataOutput();
     private UserDataInput input = new UserDataInput();
-    private SolutionLogic logic = new SolutionLogic();
 
-    public void solve() {
+    public void determineRequirements() {
         int num;
         int nextNum;
         boolean isIncreasing = true;
@@ -25,15 +24,15 @@ public class Solution {
                 break;
             }
 
-            if (!logic.isIncreasing(num, nextNum)) {
+            if (!(num < nextNum)) {
                 isIncreasing = false;
             }
 
-            if (logic.hasSamePair(num, nextNum)) {
+            if (num == nextNum) {
                 hasSamePair = true;
             }
 
-            if (!logic.isAlternating(num, nextNum)) {
+            if (!(num < 0 && nextNum > 0 || num > 0 && nextNum < 0)) {
                 isAlternating = false;
             }
 

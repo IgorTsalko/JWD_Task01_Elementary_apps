@@ -1,33 +1,45 @@
 package com.tsalko.main.task08;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class Expression {
 
-    private UserDataOutput output = new UserDataOutput();
-    private UserDataInput input = new UserDataInput();
-    private ExpressionLogic logic = new ExpressionLogic();
-
     public void solveExpression() {
-        Map<Double, Double> results = new HashMap<>();
+        ArrayList<Double> values;
         double a;
         double b;
         double h;
 
-        output.showMessage("Enter a:");
-        a = input.getDoubleFromUser();
+        //random values
+        a = 5;
+        b = 33;
+        h = 4;
 
-        output.showMessage("Enter b:");
-        b = input.getDoubleFromUser();
+        values = getValues(a, b, h);
 
-        output.showMessage("Enter h:");
-        h = input.getDoubleFromUser();
+        System.out.println(values);
 
-        results = logic.getSolve(a, b, h);
+    }
 
-        output.showFunctionResults(results);
+    private ArrayList<Double> getValues(double a, double b, double h) {
+        ArrayList<Double> values = new ArrayList<>();
+        double y;
+        double x = a;
 
+        //random value
+        int c = 5;
+
+        while (x <= b) {
+            if (x != 15) {
+                y = (x - c) + 6;
+            } else {
+                y = (x + c) * 2;
+            }
+            values.add(y);
+            x += h;
+        }
+
+        return values;
     }
 
 }

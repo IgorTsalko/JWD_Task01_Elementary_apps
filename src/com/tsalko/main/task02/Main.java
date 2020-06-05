@@ -4,12 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         Calendar calendar = new Calendar();
-        UserDataInput input = new UserDataInput();
-        UserDataOutput output = new UserDataOutput();
-        int dayNumber;
 
-        output.showMessage("Enter day Number:");
-        dayNumber = input.getIntFromUser();
+        // random day
+        int dayNumber = 4;
+
         calendar.dayAndMonthByDayNumber(dayNumber);
     }
 }

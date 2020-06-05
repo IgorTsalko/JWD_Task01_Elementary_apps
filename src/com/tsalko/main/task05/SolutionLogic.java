@@ -21,7 +21,7 @@ public class SolutionLogic {
     }
 
     public int numberViceVersa(int num) {
-        int v;
+        int viceVersa;
         int a;
         int b;
         int c;
@@ -31,8 +31,8 @@ public class SolutionLogic {
         b = num % 10;
         num /= 10;
         c = num;
-        v = a * 100 + b * 10 + c;
-        return v;
+        viceVersa = a * 100 + b * 10 + c;
+        return viceVersa;
     }
 
     public int madeFourDigitNumber(int num) {

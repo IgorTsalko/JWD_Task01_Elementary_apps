@@ -3,7 +3,7 @@ package com.tsalko.main.task10;
 public class Main {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.solve();
+        Program program = new Program();
+        program.determineRequirements();
     }
 }

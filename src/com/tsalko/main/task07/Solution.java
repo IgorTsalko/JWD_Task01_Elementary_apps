@@ -2,21 +2,21 @@ package com.tsalko.main.task07;
 
 public class Solution {
 
-    private UserDataInput input = new UserDataInput();
-    private UserDataOutput output = new UserDataOutput();
-    private SolutionLogic logic = new SolutionLogic();
-
     public void swapFractionalAndIntegerParts() {
         double number;
-        double result;
-        output.showMessage("Enter a number matches this pattern nnn.ddd:");
-        number = input.getDoubleFromUser();
+        double swapNumber;
+
+        //random value
+        number = 375.766;
 
         if (String.valueOf(number).matches("\\d{3}.\\d{3}")) {
-            result = logic.swapParts(number);
-            output.showMessage("Swap number: " + result);
+            double fractionPart = number %1;
+            double integerPart = (number - fractionPart) / 1000;
+
+            swapNumber = (int) (fractionPart * 1000) + integerPart;
+            System.out.println("Swap number: " + swapNumber);
         } else {
-            output.showError();
+            System.out.println("Wrong number");
         }
     }
 }

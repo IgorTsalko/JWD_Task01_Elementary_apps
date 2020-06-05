@@ -2,29 +2,22 @@ package com.tsalko.main.task01;
 
 public class Expression {
 
-    private ExpressionLogic logic = new ExpressionLogic();
-    private UserDataInput input = new UserDataInput();
-    private UserDataOutput output = new UserDataOutput();
-
     private double a;
     private double b;
     private double c;
     private double result;
 
     public void solveExpression() {
-        output.showMessage("To solve the expression enter variables a, b, c");
 
-        output.showMessage("Enter a:");
-        a = input.getDoubleFromUser();
+        // randoms values
+        a = 5;
+        b = 12;
+        c = 4;
 
-        output.showMessage("Enter b:");
-        b = input.getDoubleFromUser();
+        result = b + Math.sqrt(b * b + 4 * a * c);
+        result /= 2 * a;
+        result -= Math.pow(a, 3) * c + Math.pow(b, -2);
 
-        output.showMessage("Enter c:");
-        c = input.getDoubleFromUser();
-
-        result = logic.getExpressionResult(a, b, c);
-
-        output.showMessage(String.format("Result of expression is: %.2f", result));
+        System.out.printf("Result of expression is: %.2f", result);
     }
 }

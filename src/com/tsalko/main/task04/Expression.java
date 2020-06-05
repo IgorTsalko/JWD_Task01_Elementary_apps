@@ -2,19 +2,19 @@ package com.tsalko.main.task04;
 
 public class Expression {
 
-    private ExpressionLogic logic = new ExpressionLogic();
-    private UserDataInput input = new UserDataInput();
-    private UserDataOutput output = new UserDataOutput();
-
-    private double x;
-    private double result;
-
     public void solveExpression() {
-        output.showMessage("Enter x:");
-        x = input.getDoubleFromUser();
+        double x;
+        double result;
 
-        result = logic.getExpressionResult(x);
+        //random value;
+        x = 20;
 
-        output.showMessage(String.format("Result of expression is: %.2f", result));
+        if (x <= 13) {
+            result = -1 * Math.pow(x, 3) + 9;
+        } else {
+            result = -1 * (3 / (x +1));
+        }
+
+        System.out.printf("Result of expression is: %.2f", result);
     }
 }
