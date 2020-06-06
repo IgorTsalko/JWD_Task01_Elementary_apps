@@ -3,6 +3,7 @@ package com.tsalko.main.task06;
 public class Expression {
 
     public void solveExpression() {
+        //Название переменных взято из формулы в условии
         int a1;
         int d;
         long n;
@@ -42,7 +43,8 @@ public class Expression {
      */
 
     private int getCountForInt(int a1, int d) {
-        int sum = 0;
+        //Название переменных взято из формулы в условии
+        int sN = 0;
         int n = 1;
         int aN;
 
@@ -50,16 +52,16 @@ public class Expression {
             aN = a1 + (n - 1) * d;
 
             if (d > 0) {
-                if (n > 1 && sum > a1 && (sum + aN) < 0) {
+                if (n > 1 && sN > a1 && (sN + aN) < 0) {
                     break;
                 }
             } else {
-                if (n > 1 && sum < a1 && (sum + aN) > 0) {
+                if (n > 1 && sN < a1 && (sN + aN) > 0) {
                     break;
                 }
             }
-            sum += aN;
-            System.out.println("Sum: " + sum);
+            sN += aN;
+            System.out.println("Sum: " + sN);
             n++;
         }
 
