@@ -1,6 +1,6 @@
 package com.tsalko.main.task07;
 
-public class Solution {
+public class Task {
 
     public void swapFractionalAndIntegerParts() {
         double number;

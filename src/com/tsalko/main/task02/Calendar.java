@@ -2,11 +2,11 @@ package com.tsalko.main.task02;
 
 public class Calendar {
 
-    public void dayAndMonthByDayNumber(int dayNumber) {
+    public void dayAndMonthByDayNumber(int dayOfYear) {
         String date;
 
-        if (dayNumber <= 365 && dayNumber > 0) {
-            date = getDateByDayNumber(dayNumber);
+        if (dayOfYear <= 365 && dayOfYear > 0) {
+            date = formDateByDayNumber(dayOfYear);
             System.out.println(date);
         } else {
             System.out.println("Invalid Day Number!");
@@ -17,7 +17,7 @@ public class Calendar {
      * Метод для решения через switch
      * @param dayOfYear номер дня в году
      */
-    private void showDateByDayOfYear(int dayOfYear) {
+    private String formDateByDayNumber(int dayOfYear) {
         // Начинаем проверять с первого месяца
         int monthNumber = 1;
 
@@ -39,23 +39,24 @@ public class Calendar {
             }
         }
 
-        System.out.printf("Month: %02d, day: %02d", monthNumber, dayOfYear);
+        // Возврат форматированной даты без названия месяца
+        return String.format("Month: %02d, day: %02d", monthNumber, dayOfYear);
     }
     
     /**
-     * Метод для решения через Enum
-     * @param dayNumber номер дня в году
+     * Метод для решения через Enum с выводом названия месяца
+     * @param dayOfYear номер дня в году
      * @return форматированную строку даты в виде "Месяц день"
      */
-    private String getDateByDayNumber(int dayNumber) {
+    private String formDateByDayNumberViaEnum(int dayOfYear) {
         String date = "";
 
         for (Month month : Month.values()) {
-            if (dayNumber <= month.daysInMonth) {
-                date = month.name() + " " + dayNumber;
+            if (dayOfYear <= month.daysInMonth) {
+                date = month.name() + " " + dayOfYear;
                 break;
             } else {
-                dayNumber -= month.daysInMonth;
+                dayOfYear -= month.daysInMonth;
             }
         }
 

@@ -1,8 +1,8 @@
 package com.tsalko.main.task05;
 
-public class SolutionLogic {
+public class TaskLogic {
 
-    public int findSumOfDigits(int num) {
+    public int calcSumOfDigits(int num) {
         int sum = 0;
         while (num != 0) {
             sum += num % 10;
@@ -11,7 +11,7 @@ public class SolutionLogic {
         return sum;
     }
 
-    public int findMultiplicationOfDigits(int num) {
+    public int calcMultiplicationOfDigits(int num) {
         int multiplication = 1;
         while (num != 0) {
             multiplication *= num % 10;

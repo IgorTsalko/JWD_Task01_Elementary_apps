@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Expression {
 
-    public void solveExpression() {
+    public void solve() {
         ArrayList<Double> values;
         double a;
         double b;
@@ -15,13 +15,13 @@ public class Expression {
         b = 33;
         h = 4;
 
-        values = getValues(a, b, h);
+        values = findValues(a, b, h);
 
         System.out.println(values);
 
     }
 
-    private ArrayList<Double> getValues(double a, double b, double h) {
+    private ArrayList<Double> findValues(double a, double b, double h) {
         ArrayList<Double> values = new ArrayList<>();
         double y;
         double x = a;

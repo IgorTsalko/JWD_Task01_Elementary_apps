@@ -1,20 +1,20 @@
 package com.tsalko.main.task05;
 
-public class Solution {
+public class Task {
 
-    private SolutionLogic logic = new SolutionLogic();
+    private TaskLogic logic = new TaskLogic();
 
-    public void getSolution() {
+    public void solve() {
         int number;
         int result;
 
         //random value
         number = 857;
 
-        result = logic.findSumOfDigits(number);
+        result = logic.calcSumOfDigits(number);
         System.out.printf("Sum of digits of the number: %d", result);
 
-        result = logic.findMultiplicationOfDigits(number);
+        result = logic.calcMultiplicationOfDigits(number);
         System.out.printf("Multiplication of digits of the number: %d", result);
 
         result = logic.numberViceVersa(number);

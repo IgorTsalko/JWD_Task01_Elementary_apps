@@ -7,7 +7,7 @@ public class Expression {
     private double c;
     private double result;
 
-    public void solveExpression() {
+    public void solve() {
 
         // randoms values
         a = 5;

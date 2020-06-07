@@ -2,7 +2,7 @@ package com.tsalko.main.task04;
 
 public class Expression {
 
-    public void solveExpression() {
+    public void solve() {
         double x;
         double result;
 

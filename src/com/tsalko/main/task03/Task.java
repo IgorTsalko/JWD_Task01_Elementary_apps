@@ -1,6 +1,6 @@
 package com.tsalko.main.task03;
 
-public class Solution {
+public class Task {
 
     public void solveExpression(int a, int b, int c) {
 
