@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Expression {
 
-    public void solve() {
+    public void showResult() {
         ArrayList<Double> values;
         double a;
         double b;

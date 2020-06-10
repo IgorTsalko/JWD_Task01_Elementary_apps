@@ -4,7 +4,7 @@ public class Task {
 
     private TaskLogic logic = new TaskLogic();
 
-    public void solve() {
+    public void showResult() {
         int number;
         int result;
 

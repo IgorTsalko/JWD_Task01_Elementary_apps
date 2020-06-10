@@ -2,15 +2,12 @@ package com.tsalko.main.task02;
 
 public class Calendar {
 
-    public void dayAndMonthByDayNumber(int dayOfYear) {
+    public void showDayAndMonthByDayNumber(int dayOfYear) {
         String date;
 
-        if (dayOfYear <= 365 && dayOfYear > 0) {
-            date = formDateByDayNumber(dayOfYear);
-            System.out.println(date);
-        } else {
-            System.out.println("Invalid Day Number!");
-        }
+        date = formDateByDayNumber(dayOfYear);
+
+        System.out.println(date);
     }
 
     /**

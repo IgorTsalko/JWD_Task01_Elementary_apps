@@ -2,14 +2,14 @@ package com.tsalko.main.task06;
 
 public class Expression {
 
-    public void solve() {
-        // Название переменных взяты из формулы в условии
+    public void showResult() {
+        // Названия переменных взяты из формулы в условии
         int a1;
         int d;
         long n;
 
         // random values
-        a1 = 1000000;
+        a1 = 1_000_000_000;
         d = -1000;
 
         n = findStepForInt(a1, d);

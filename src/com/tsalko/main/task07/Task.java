@@ -2,21 +2,27 @@ package com.tsalko.main.task07;
 
 public class Task {
 
-    public void swapFractionalAndIntegerParts() {
+    public void showSwappedFractionalAndIntegerParts() {
+
         double number;
         double swapNumber;
 
         //random value
         number = 375.766;
 
-        if (String.valueOf(number).matches("\\d{3}.\\d{3}")) {
-            double fractionPart = number %1;
-            double integerPart = (number - fractionPart) / 1000;
+        swapNumber = swapFractionalAndIntegerParts(number);
+        System.out.println("Swap number: " + swapNumber);
+    }
 
-            swapNumber = (int) (fractionPart * 1000) + integerPart;
-            System.out.println("Swap number: " + swapNumber);
-        } else {
-            System.out.println("Wrong number");
-        }
+    public double swapFractionalAndIntegerParts(double number) {
+
+        double swapNumber;
+
+        double fractionPart = number %1;
+        double integerPart = (number - fractionPart) / 1000;
+
+        swapNumber = (int) (fractionPart * 1000) + integerPart;
+
+        return swapNumber;
     }
 }

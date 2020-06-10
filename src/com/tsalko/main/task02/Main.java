@@ -6,8 +6,12 @@ public class Main {
         Calendar calendar = new Calendar();
 
         // random day
-        int dayNumber = 4;
+        int dayOfYear = 4;
 
-        calendar.dayAndMonthByDayNumber(dayNumber);
+        if (dayOfYear <= 365 && dayOfYear > 0) {
+            calendar.showDayAndMonthByDayNumber(dayOfYear);
+        } else {
+            System.out.println("Invalid Day Number!");
+        }
     }
 }

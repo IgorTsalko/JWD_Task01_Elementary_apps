@@ -5,7 +5,11 @@ public class Program {
     private UserDataOutput output = new UserDataOutput();
     private UserDataInput input = new UserDataInput();
 
-    public void determineRequirements() {
+    /*
+    Метод можно разбить на несколько мелких, каждый из которых решает свою задачу
+    но думаю, для решения этой простой задачи это не нужно.
+     */
+    public void showResults() {
         int num;
         int nextNum;
         boolean isIncreasing = true;

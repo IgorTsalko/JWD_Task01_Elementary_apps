@@ -8,23 +8,6 @@ public class UserDataInput {
 
     private Scanner in = new Scanner(System.in);
 
-    public double getDoubleFromUser() {
-        double data;
-
-        while (true) {
-            if (in.hasNextDouble()) {
-                data = in.nextDouble();
-                break;
-            } else {
-                in.next();
-                userDataOutput.showError();
-                userDataOutput.showMessage("Try again");
-            }
-        }
-
-        return data;
-    }
-
     public int getIntFromUser() {
         int data;
 

@@ -2,7 +2,7 @@ package com.tsalko.main.task09;
 
 public class Expression {
 
-    public void solve() {
+    public void showResult() {
         long value;
         value = calculateValue();
 
